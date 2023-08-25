@@ -1,0 +1,16 @@
+/* Connect IR Sensor to Pin 7 and LED to Pin 13 */
+int LED = 13;
+int IRsensorPin = 7;
+int Obstacle = HIGH;
+void setup()
+{ pinMode(LED, OUTPUT);
+pinMode(IRsensorPin, INPUT);
+}
+void loop()
+{
+Obstacle = digitalRead(IRsensorPin);
+if (Obstacle == HIGH)
+{ digitalWrite(LED, HIGH); }
+else
+{ digitalWrite(LED, LOW); }
+delay(200); }
